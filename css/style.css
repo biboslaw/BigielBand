@@ -1,3 +1,13 @@
+@font-face {
+    font-family: archivoBlack;
+    src: url(../fonts/ArchivoBlack-Regular.ttf);
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
 body {
     background-color: black;
     color: white;
@@ -17,7 +27,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    font-family: 'Archivo Black', sans-serif;
+    font-family: archivoBlack;
     z-index: 9998;
     display: none;
   
@@ -46,7 +56,7 @@ body {
     background-color: transparent;
     border-style: none;
     margin: 1% auto;
-    font-family: 'Archivo Black', sans-serif;
+    font-family: archivoBlack;
     font-size: 1em;
     cursor: pointer;
     color: white;
@@ -203,7 +213,7 @@ ul .left {
     color: black;
    
     background-image
-    font-family: 'Montserrat', sans-serif;
+    font-family: ;
      
     background-image: url("../image/186_reduced.png");
     background-size: cover;
@@ -225,7 +235,7 @@ ul .left {
     padding: 4% 4% 0% 4%;
     font-size: 1.5em;
     line-height: 1.5em;
-    font-family: 'Montserrat', sans-serif;
+    font-family: montserrat;
 }
 
 #about .centerArtist {
@@ -351,13 +361,13 @@ ul .left {
 }
 
 #comments .commentsDiv .quote p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: montserrat;
     font-style: italic;
     
 }
 
 #comments .commentsDiv .quote h3{
-    font-family: 'Archivo Black', sans-serif;
+    font-family: archivoBlack;
     font-weight: 100;
     text-align: right;
     padding-right: 5%;
@@ -437,7 +447,7 @@ ul .left {
 }
 
 #contact .contactDiv h1{
-    font-family: 'Archivo Black', sans-serif;
+    font-family: archivoBlack;
     margin-bottom: 7%;
     font-weight: 100;
 }
@@ -499,7 +509,7 @@ ul .left {
 
 #contact .contactDiv .contactData .contactCont p {
     margin-top: 15%;
-    font-family: 'Archivo Black', sans-serif;
+    font-family: archivoBlack;
     font-size: 1.5em;
     
 }
@@ -601,7 +611,7 @@ ul .left {
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: montserrat;
     font-size: 0.6em;
 }
 
