@@ -356,24 +356,50 @@ ul .left {
     
 }
 
-#comments .commentsDiv .quote {
+#comments .commentsDiv .quote1 {
     margin-top: auto;
     margin-bottom: auto;
     padding: 5% 25%;
+    position: absolute;
+    font-family: montserrat;
+    font-style: italic;
 }
 
-#comments .commentsDiv .quote p {
+#comments .commentsDiv .quote2 {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 5% 25%;
+    position: absolute;
+    display: none;
+    
+}
+
+#comments .commentsDiv .quote1 p {
     font-family: montserrat;
     font-style: italic;
     
 }
 
-#comments .commentsDiv .quote h3{
+#comments .commentsDiv .quote1 h3{
     font-family: archivoBlack;
     font-weight: 100;
     text-align: right;
     padding-right: 5%;
 }
+
+#comments .commentsDiv .quote2 p {
+    font-family: montserrat;
+    font-style: italic;
+    
+}
+
+#comments .commentsDiv .quote2 h3{
+    font-family: archivoBlack;
+    font-weight: 100;
+    text-align: right;
+    padding-right: 5%;
+}
+
 #company {
     min-height: 200px;
     overflow: hidden;
