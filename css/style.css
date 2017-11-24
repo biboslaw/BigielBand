@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 @font-face {
     font-family: archivoBlack;
     src: url(../fonts/ArchivoBlack-Regular.ttf);
@@ -8,9 +8,7 @@
     font-family: montserrat;
     src: url(../fonts/Montserrat-Regular.ttf);
 }
-=======
-@import url('https://fonts.googleapis.com/css?family=Archivo+Black&subset=latin-ext');
->>>>>>> 602706c8d6378d8d4ea11a60b546301ef20a0d39
+
 
 body {
     background-color: black;
