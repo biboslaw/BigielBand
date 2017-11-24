@@ -1,0 +1,801 @@
+body {
+    background-color: black;
+    color: white;
+    margin: 0 0;
+    padding: 0 0;
+    
+    
+}
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+    overflow: hidden;
+    background-color:  rgba(33,33,33,0.7);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-family: 'Archivo Black', sans-serif;
+    z-index: 9998;
+    display: none;
+  
+}
+
+.mobileNav {
+    position: fixed;
+    background: rgba(33,33,33,0.7);
+    z-index: 9999;
+    width: 100%;
+    display: none;
+    text-align: center;
+    transition: 0.3s;
+    padding: 6px 0px;
+    
+}
+
+.mobileNav:hover {
+    
+   background-color:  rgba(255,255,255,0.8);
+    color: black;
+   
+}
+
+.mobileNav button {
+    background-color: transparent;
+    border-style: none;
+    margin: 1% auto;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    color: white;
+    
+    outline: none;
+    transition: 0.3s;
+    padding: 0 0;
+    
+}
+
+.mobileNav button:hover {
+    color: black;
+}
+
+.mobileNav button:visited {
+    color: white;
+}
+
+.mobileNav:visited {
+	background: rgba(33,33,33,0.7);
+}
+
+
+
+
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    background-color:  rgba(33,33,33,0);
+    
+}
+
+li a:hover {
+    background-color:  rgba(255,255,255,0.8);
+    color: black;
+}
+
+
+
+ul .left img {
+    padding-left: 5%;
+    padding-top: 4%;
+    max-height: 35px;
+    width: auto;
+    opacity: 0.6;    
+}
+
+ul .left {
+    float: left;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav {
+        padding-top: 42px;
+    }
+    ul li {
+        float: none;
+
+    }
+    ul .left {
+        float: none;
+        text-align: center;
+    }
+    ul .left img {
+        padding-left: 0px;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        
+    }
+}
+
+.active {
+    background-color: #2980b9;
+}
+
+#logo {
+    height: 100vh;
+    text-align: center;
+    align-items: center;
+    background-image: url("../image/57_reduced.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+
+
+}
+
+.centerDiv {
+    position: relative;
+    top: 100px;
+    text-align: center;
+    margin: auto;
+    
+
+
+
+}
+
+#logo .centerDiv img {
+    max-width: 60%;
+    height: auto;
+}
+
+#logo svg {
+    width: 60px;
+    height: auto;
+    margin-top: 5px;
+    transition: 0.2s linear;
+    fill:white;
+    
+    
+}
+
+#logo svg:hover {
+    fill: black;
+
+}
+
+
+.arrow {
+
+    width: 70px;
+    height: 70px;
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.3);
+    transition: 0.2s linear;
+}
+
+.arrow:hover {
+    background-color: white;
+}
+
+.bounce {
+    -webkit-animation: bounce linear 2s infinite;
+    -moz-animation: bounce linear 2s infinite;
+    -o-animation: bounce linear 2s infinite;
+    -ms-animation: bounce linear 2s infinite;
+    animation: bounce linear 2s infinite;
+}
+
+#about {
+    color: black;
+   
+    background-image
+    font-family: 'Montserrat', sans-serif;
+     
+    background-image: url("../image/186_reduced.png");
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center center;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+#about .aboutDiv {
+ 
+    margin: 0 auto;
+    padding-top: 1%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#about p, h3 {
+    padding: 4% 4% 0% 4%;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#about .centerArtist {
+    margin: 0 auto;
+    text-align: center;
+    
+    padding-bottom: 4%;
+    padding-top: 2%;
+}
+
+#about .centerArtist .artist {
+   /* display: none;*/
+    max-width: 300px;
+    display:inline-block;
+  
+}   
+
+
+#about .centerArtist .artist img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+    
+    box-shadow: 5px 5px 15px black;
+}
+
+#about .centerArtist .artist .artistDesc p {
+    font-size: 1em;
+    padding: 2% 10%;
+}
+
+#media {
+    background-image: url("../image/185_reduced.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    text-align: center;
+     overflow: hidden;
+}
+
+#media .mediaOutDiv {
+   
+}
+
+#media .mediaOutDiv div {
+    display: inline-block;
+}
+
+#media .mediaOutDiv div:nth-child(even) {
+    padding-left: 1%;
+    
+}
+
+#media .mediaOutDiv div:nth-child(odd) {
+    display: inline-block;
+    padding-right: 1%;
+    
+}
+#media .mediaOutDiv:nth-child(odd) div {
+   padding-bottom: 2%;
+}
+
+#media .refresh {
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.2);
+    max-height: 70px;
+    max-width: 70px;
+    transition: 0.2s linear;
+}
+
+#media .refresh:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+#media .refresh svg {
+    max-height: 100px;
+    width: auto;
+    fill: white;
+    animation: refresh 3s infinite cubic-bezier(1,0,0,1);
+    transition: 0.2s linear;
+}
+
+#media .refresh svg:hover {
+    fill: black;
+}
+
+
+
+#media .mediaOutDiv div iframe {
+    height: 260px;
+    width: 480px;
+    border: solid black;
+    box-shadow: 5px 5px 15px black;
+}
+
+
+
+
+#comments {
+    background-color: #111111;   
+    
+}
+
+#comments .commentsDiv {
+    min-height: 250px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    color: white;
+    text-align: center;
+    
+}
+
+#comments .commentsDiv .quote {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 5% 25%;
+}
+
+#comments .commentsDiv .quote p {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    
+}
+
+#comments .commentsDiv .quote h3{
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: 100;
+    text-align: right;
+    padding-right: 5%;
+}
+#company {
+    min-height: 200px;
+    overflow: hidden;
+    background-image: url("../image/57_.png");
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center center;
+
+
+
+}
+
+#company .companyDiv {
+
+    min-height: 200px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+
+
+}
+
+#company .companyDiv .companyDiv2 {
+    padding: 50px 0;
+    
+
+
+}
+
+#company .companyDiv .companyDiv2 .tradeMark {
+    display: inline-block;
+    margin: 5px 15px;
+    
+
+
+}
+
+#company .companyDiv .companyDiv2 .tradeMark .icon {
+    height: 50px;
+    width: auto;
+    fill: grey;
+    transition: 0.2s linear;
+}
+
+#company .companyDiv .companyDiv2 .tradeMark .icon:hover {
+    fill: black;
+    transform: scale(1.2);
+}
+
+
+
+
+#company .companyDiv .companyDiv2 .tradeMark .makitaIcon {
+    height: 50px;
+    width: auto;
+    fill: grey;
+    transition: 0.2s linear;
+}
+
+#company .companyDiv .companyDiv2 .tradeMark .makitaIcon:hover {
+    transform: scale(1.2);
+    fill: red;
+}
+
+
+#contact .contactDiv {
+    text-align: center;
+    padding-top: 3%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 5%;
+    
+}
+
+#contact .contactDiv h1{
+    font-family: 'Archivo Black', sans-serif;
+    margin-bottom: 7%;
+    font-weight: 100;
+}
+
+#contact .contactDiv .contactData {
+    display: inline-block;
+    padding-right: 10%;
+    position: relative;
+
+}
+
+#contact .contactDiv .funPage {
+    display: inline-block;
+    padding-left: 10%;    
+    padding-top: 1%;
+    
+}
+
+#contact .contactDiv .contactData .contactLogo {
+    max-height: 250px;
+    max-width: 215px;
+    background-color: white;
+    padding-bottom: 30px;
+    padding-top: 5px;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(100, 100, 100, 0.5), 0 3px 15px 0 rgba(100, 100, 100, 0.5);
+    transform: rotate(-5deg);
+   
+   
+}
+
+#contact .contactDiv .contactData .under1 {
+    height: 250px;
+    width: 215px;
+    background-color: white;
+    position: absolute;
+    left: 10%;
+    z-index: -1;
+    box-shadow: 0 4px 8px 0 rgba(100, 100, 100, 0.5), 0 3px 15px 0 rgba(100, 100, 100, 0.5);
+    
+}
+
+#contact .contactDiv .contactData .under2 {
+    height: 250px;
+    width: 215px;
+    background-color: white;
+    position: absolute;
+    left: 10%;
+    z-index: -2;
+    box-shadow: 0 4px 8px 0 rgba(100, 100, 100, 0.5), 0 3px 15px 0 rgba(100, 100, 100, 0.5);
+    transform: rotate(5deg);
+}
+
+#contact .contactDiv .contactData .contactLogo img {
+    max-height: 200px;
+    width: auto;
+    box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.2);
+}
+
+#contact .contactDiv .contactData .contactCont p {
+    margin-top: 15%;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.5em;
+    
+}
+
+
+#contact .contactDiv .funPage .fbIcon{
+    fill: white;
+    height: 100px;
+    width: auto;
+    transition: 0.2s linear;
+}
+
+#contact .contactDiv .funPage .fbIcon:hover{
+    fill: #3b5998;
+    transform: scale(1.2);
+}
+
+#contact .contactDiv .funPage .instaIcon{
+    fill: white;
+    height: 100px;
+    width: auto;
+    transition: 0.2s linear;
+}
+
+#contact .contactDiv .funPage .instaIcon:hover{
+    fill: url(#grad2);
+    transform: scale(1.2);
+}
+
+#contact .contactDiv .funPage .youtubeIcon{
+    fill: white;
+    height: 90px;
+    width: auto;
+    transition: 0.2s linear;
+    margin-top: 5%;
+    margin-bottom: 100%;
+}
+
+#contact .contactDiv .funPage .youtubeIcon:hover{
+    fill: #cc181e;
+    transform: scale(1.2);
+}
+
+
+#contact .contactDiv .funPage a{
+    display: block;
+}
+
+@media only screen and (max-width: 600px) {
+    #media .mediaOutDiv div iframe {
+        height: 173px;
+        width: 320px;
+        border: 2px solid black;
+    }
+}
+
+@media only screen and (max-width: 786px) {
+    
+    #about p, h3 {
+  
+    font-size: 1em;
+    
+    
+    }
+    #media .mediaOutDiv div:nth-child(even) {
+        padding-left: 0px;
+    }
+    #media .mediaOutDiv div:nth-child(odd) {
+
+        padding-right: 0px;
+    }
+    #media .mediaOutDiv:nth-child(odd) div {
+        padding-bottom: 0px;
+    }
+
+    #media .mediaOutDiv div {
+        padding-top: 1%;
+    }
+    #contact .contactDiv .funPage {
+        padding: 0px;
+        margin-top: 2%;
+    }
+    #contact .contactDiv .funPage a {
+        display: inline-block;
+    }
+    #contact .contactDiv .contactData {
+        padding: 0px 0px;
+        margin-left: auto;
+        margin-bottom: auto;
+    }
+    #contact .contactDiv .funPage .youtubeIcon {
+        margin-bottom: 0;
+    }
+}
+
+.footer {
+    height: 12px;
+    background-color: #111111;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6em;
+}
+
+.footer a {
+    text-decoration: none;
+    color:crimson;
+}
+
+.footer a:hover{
+    background-color: white;
+    
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    8% {
+        transform: translateY(-30px);
+    }
+    16% {
+        transform: translateY(0);
+    }
+    24% {
+        transform: translateY(-15px);
+    }
+    32% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    48% {
+        transform: translateY(0);
+    }
+    56% {
+        transform: translateY(-5px);
+    }
+    64% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    8% {
+        transform: translateY(-30px);
+    }
+    16% {
+        transform: translateY(0);
+    }
+    24% {
+        transform: translateY(-15px);
+    }
+    32% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    48% {
+        transform: translateY(0);
+    }
+    56% {
+        transform: translateY(-5px);
+    }
+    64% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@-moz-keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    15% {
+        transform: translateY(-30px);
+    }
+    30% {
+        transform: translateY(0);
+    }
+    45% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@-o-keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    15% {
+        transform: translateY(-30px);
+    }
+    30% {
+        transform: translateY(0);
+    }
+    45% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes refresh {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.animBlock {
+    position: relative;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all .55s ease-in;
+    -moz-transition: all .55s ease-in;
+    -ms-transition: all .55s ease-in;
+    -o-transition: all .55s ease-in;
+    transition: all .55s ease-in;
+}
+
+.animBlock[data-position="top"] {
+	top: 60px;
+}
+
+.animBlock[data-position="left"] {
+	left: 60px;
+}
+
+.animBlock[data-position="right"] {
+	right: 60px;
+}
+
+.animBlock[data-position="bottom"] {
+	bottom: -60px;
+    
+}
+
+.animBlock[data-position="none"] {
+	top: 0%;
+}
+
+.animBlock[data-position="top"].viewed {
+	top: 0%;
+    opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.animBlock[data-position="left"].viewed {
+	left: 0%;
+    opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.animBlock[data-position="right"].viewed {
+	right: 0%;
+    opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.animBlock[data-position="bottom"].viewed {
+	bottom: 0px;
+    opacity: 1;
+  filter: alpha(opacity=100);
+    
+}
+
+.animBlock[data-position="none"].viewed {
+	top: 0%;
+    opacity: 1;
+  filter: alpha(opacity=100);
+}
+
