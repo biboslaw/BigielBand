@@ -113,7 +113,7 @@ $(document).ready(function () {
         $('.quote1 p').html(rand["q"]);
         $('.quote1 h3').html(rand["a"]);
         setTimeout(function(){
-            $('.quote1').slideUp();
+            $('.quote1').slideUp(); 
         }, 1000);
     };
     function fillQuote2() {
