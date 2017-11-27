@@ -97,7 +97,7 @@ $(document).ready(function () {
 
 
         if (docViewBottom >= (elemTop + elemHeightMid)) {
-            $(elem).removeClass('notViewed').addClass('viewed');
+            $(elem).removeClass('notViewed').addClass('viewed').fadeIn();
             var animElemLeft = $('.animBlock.notViewed').length;
             
         }
@@ -105,24 +105,28 @@ $(document).ready(function () {
     
     ////////// function calls ////
 
-    setInterval(fillQuote1, 5000);
+   
+     setInterval(switchQuote,5000);
+   
+    function switchQuote(){
+    $('.quote1').animate({left: '-700', opacity: '0'}).delay(500).promise().done(fillQuote1);
+    };
+        
+    
+    
     
     function fillQuote1() {
         rand = randomQuote();
-        $('.quote1').slideDown();
-        $('.quote1 p').html(rand["q"]);
-        $('.quote1 h3').html(rand["a"]);
-        setTimeout(function(){
-            $('.quote1').slideUp(); 
-        }, 1000);
+        $(this).children('p').html(rand["q"]);
+        $(this).children('h3').html(rand["a"]);
+        $(this).css({left: '700px',opacity: '0'},100).delay(500).animate({opacity: '1', left: '0'});
+        
+        
+        
     };
-    function fillQuote2() {
-        rand = randomQuote();
-        $('.quote2').slideDown();
-        $('.quote2 p').html(rand["q"]);
-        $('.quote2 h3').html(randomQuote()["a"]);
-        $('.quote2').slideUp();
-    };
+        
+  
+   
 
     $(document).on('scroll', onScroll);
 

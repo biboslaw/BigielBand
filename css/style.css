@@ -343,11 +343,7 @@ ul .left {
 
 
 #comments {
-    background-color: #111111;   
-    
-}
-
-#comments .commentsDiv {
+    background-color: #111111; 
     min-height: 250px;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
@@ -356,49 +352,49 @@ ul .left {
     
 }
 
-#comments .commentsDiv .quote1 {
-    margin-top: auto;
-    margin-bottom: auto;
-    padding: 5% 25%;
+#comments .commentsDiv {
+    
+    position: relative;
+    width: 100%
+    
+    
+}
+
+#comments .quote1 {
+    
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding-top: 2%;
     position: absolute;
     font-family: montserrat;
     font-style: italic;
+    width: 500px;
+    overflow: hidden;
+    transition: all .55s linear;
+
 }
 
-#comments .commentsDiv .quote2 {
-    margin-top: auto;
-    margin-bottom: auto;
-    padding: 5% 25%;
-    position: absolute;
-    display: none;
-    
-}
 
-#comments .commentsDiv .quote1 p {
+#comments .quote1 p {
     font-family: montserrat;
     font-style: italic;
     
 }
 
-#comments .commentsDiv .quote1 h3{
+#comments .quote1 h3{
     font-family: archivoBlack;
     font-weight: 100;
     text-align: right;
-    padding-right: 5%;
-}
-
-#comments .commentsDiv .quote2 p {
-    font-family: montserrat;
-    font-style: italic;
     
 }
 
-#comments .commentsDiv .quote2 h3{
-    font-family: archivoBlack;
-    font-weight: 100;
-    text-align: right;
-    padding-right: 5%;
+.quoteMoved {
+    left: -700px;
+    opacity: 1;
+    background-color: blue;
 }
+
 
 #company {
     min-height: 200px;
@@ -778,62 +774,85 @@ ul .left {
     position: relative;
     opacity: 0;
     filter: alpha(opacity=0);
+  /*  -webkit-transform: translateZ(0);
+-moz-transform: translateZ(0);
+-ms-transform: translateZ(0);
+-o-transform: translateZ(0);
+transform: translateZ(0); */
     -webkit-transition: all .55s ease-in;
     -moz-transition: all .55s ease-in;
     -ms-transition: all .55s ease-in;
     -o-transition: all .55s ease-in;
     transition: all .55s ease-in;
+    will-change: opacity, transform;
 }
 
 .animBlock[data-position="top"] {
-	top: 60px;
+	transform: translateY(-40px);
 }
 
 .animBlock[data-position="left"] {
-	left: 60px;
+	transform: translateX(-40px);
 }
 
 .animBlock[data-position="right"] {
-	right: 60px;
+	transform: translateX(40px);
 }
 
 .animBlock[data-position="bottom"] {
-	bottom: -60px;
+	transform: translateY(40px);
     
 }
 
 .animBlock[data-position="none"] {
-	top: 0%;
+	transform: none;
 }
 
 .animBlock[data-position="top"].viewed {
-	top: 0%;
+	transform: none;
     opacity: 1;
   filter: alpha(opacity=100);
 }
 
 .animBlock[data-position="left"].viewed {
-	left: 0%;
+	transform: none;
     opacity: 1;
   filter: alpha(opacity=100);
 }
 
 .animBlock[data-position="right"].viewed {
-	right: 0%;
+	transform: none;
     opacity: 1;
   filter: alpha(opacity=100);
 }
 
 .animBlock[data-position="bottom"].viewed {
-	bottom: 0px;
+	transform: none;
     opacity: 1;
   filter: alpha(opacity=100);
     
 }
 
 .animBlock[data-position="none"].viewed {
-	top: 0%;
+	transform: none;
     opacity: 1;
   filter: alpha(opacity=100);
 }
 
+.animBlock2 {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transition: all .55s ease-in;
+    -moz-transition: all .55s ease-in;
+    -ms-transition: all .55s ease-in;
+    -o-transition: all .55s ease-in;
+    transition: all .55s ease-in;
+    will-change: opacity, transform;
+}
+}
+
+.hide {
+    left: 700px;
+    opacity: 1;
+        
+}
