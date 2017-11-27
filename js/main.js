@@ -103,33 +103,24 @@ $(document).ready(function () {
         }
     }
     
+    function fillQuote() {
+       
+       rand = randomQuote();
+       $('.quote1').children('p').html(rand["q"]);
+       $('.quote1').children('h3').html(rand["a"]);
+   }
+    
     ////////// function calls ////
 
    
-     setInterval(switchQuote,5000);
-   
-    function switchQuote(){
-    $('.quote1').animate({left: '-700', opacity: '0'}).delay(500).promise().done(fillQuote1);
-    };
-        
-    
-    
-    
-    function fillQuote1() {
-        rand = randomQuote();
-        $(this).children('p').html(rand["q"]);
-        $(this).children('h3').html(rand["a"]);
-        $(this).css({left: '700px',opacity: '0'},100).delay(500).animate({opacity: '1', left: '0'});
-        
-        
-        
-    };
-        
-  
+    fillQuote();
+
+    setInterval(fillQuote, 9000);
    
 
     $(document).on('scroll', onScroll);
 
+    
     $('a').on('click', function (event) {
         if (this.hash !== '') {
             event.preventDefault();

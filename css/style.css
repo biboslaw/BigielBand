@@ -15,8 +15,7 @@ body {
     color: white;
     margin: 0 0;
     padding: 0 0;
-    
-    
+   
 }
 
 .nav {
@@ -349,7 +348,8 @@ ul .left {
     border-bottom: 1px solid white;
     color: white;
     text-align: center;
-    
+    position: relative;
+    overflow: hidden;
 }
 
 #comments .commentsDiv {
@@ -362,6 +362,7 @@ ul .left {
 
 #comments .quote1 {
     
+    transform: translateX(190%);
     left: 0;
     right: 0;
     margin: auto;
@@ -370,8 +371,7 @@ ul .left {
     font-family: montserrat;
     font-style: italic;
     width: 500px;
-    overflow: hidden;
-    transition: all .55s linear;
+    
 
 }
 
@@ -379,10 +379,52 @@ ul .left {
 #comments .quote1 p {
     font-family: montserrat;
     font-style: italic;
+   
     
 }
 
+.slideEffect {
+    -webkit-animation: slide linear 2s infinite;
+    -moz-animation: slide linear 2s infinite;
+    -o-animation: slide linear 2s infinite;
+    -ms-animation: slide linear 2s infinite;
+    animation: slide linear 2s infinite;
+    animation-duration: 9s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
 #comments .quote1 h3{
+    font-family: archivoBlack;
+    font-weight: 100;
+    text-align: right;
+    
+}
+
+#comments .quote2 {
+    
+    left: 1000px;
+    right: 0;
+    margin: auto;
+    padding-top: 2%;
+    position: absolute;
+    font-family: montserrat;
+    font-style: italic;
+    width: 500px;
+    transition: all .55s linear;
+    opacity: 0;
+   
+
+}
+
+
+#comments .quote2 p {
+    font-family: montserrat;
+    font-style: italic;
+    
+}
+
+#comments .quote2 h3{
     font-family: archivoBlack;
     font-weight: 100;
     text-align: right;
@@ -649,38 +691,67 @@ ul .left {
     
 }
 
-@-webkit-keyframes bounce {
+@-webkit-keyframes slide {
     0% {
-        transform: translateY(0);
+        opacity: 0;
     }
-    8% {
-        transform: translateY(-30px);
-    }
-    16% {
-        transform: translateY(0);
-    }
-    24% {
-        transform: translateY(-15px);
-    }
-    32% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    48% {
-        transform: translateY(0);
-    }
-    56% {
-        transform: translateY(-5px);
-    }
-    64% {
-        transform: translateY(0);
+    15%,
+    85% {
+        opacity: 1;
+        transform: translateX(0);
     }
     100% {
-        transform: translateY(0);
+        opacity: 0;
+        transform: translateX(-190%);
     }
 }
+
+@-moz-keyframes slide {
+    0% {
+        opacity: 0;
+    }
+    15%,
+    85% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-190%);
+    }
+}
+
+@-o-keyframes slide {
+    0% {
+        opacity: 0;
+    }
+    15%,
+    85% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-190%);
+    }
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+    }
+    15%,
+    85% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-190%);
+    }
+}
+
+
 
 @-webkit-keyframes bounce {
     0% {
