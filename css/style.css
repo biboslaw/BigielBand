@@ -632,14 +632,7 @@ ul .left {
     }
 }
 
-@media only screen and (max-width: 786px) {
-    
-    #about p, h3 {
-  
-    font-size: 1em;
-    
-    
-    }
+@media only screen and (max-width: 1015px){
     #media .mediaOutDiv div:nth-child(even) {
         padding-left: 0px;
     }
@@ -654,6 +647,17 @@ ul .left {
     #media .mediaOutDiv div {
         padding-top: 1%;
     }
+}
+
+@media only screen and (max-width: 786px) {
+    
+    #about p, h3 {
+  
+    font-size: 1em;
+    
+    
+    }
+    
     #contact .contactDiv .funPage {
         padding: 0px;
         margin-top: 2%;
@@ -692,62 +696,61 @@ ul .left {
 }
 
 @-webkit-keyframes slide {
-    0% {
+  0%,10 {
         opacity: 0;
     }
-    15%,
-    85% {
+    20%,
+    70% {
         opacity: 1;
         transform: translateX(0);
     }
     100% {
         opacity: 0;
-        transform: translateX(-190%);
+        transform: translateX(-170%);
     }
 }
 
 @-moz-keyframes slide {
-    0% {
+   0%,10 {
         opacity: 0;
     }
-    15%,
-    85% {
+    20%,
+    70% {
         opacity: 1;
         transform: translateX(0);
     }
     100% {
         opacity: 0;
-        transform: translateX(-190%);
+        transform: translateX(-170%);
     }
 }
-
 @-o-keyframes slide {
-    0% {
+ 0%,10 {
         opacity: 0;
     }
-    15%,
-    85% {
+    20%,
+    70% {
         opacity: 1;
         transform: translateX(0);
     }
     100% {
         opacity: 0;
-        transform: translateX(-190%);
+        transform: translateX(-170%);
     }
 }
 
 @keyframes slide {
-    0% {
+    0%,10 {
         opacity: 0;
     }
-    15%,
-    85% {
+    20%,
+    70% {
         opacity: 1;
         transform: translateX(0);
     }
     100% {
         opacity: 0;
-        transform: translateX(-190%);
+        transform: translateX(-170%);
     }
 }
 
