@@ -157,6 +157,7 @@ ul .left {
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
+  
 
 
 }
@@ -175,6 +176,7 @@ ul .left {
 #logo .centerDiv img {
     max-width: 70%;
     height: auto;
+    display: none;
 }
 
 #logo svg {

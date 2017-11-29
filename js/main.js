@@ -164,8 +164,9 @@ $(document).ready(function () {
    
     
     ////////// function calls ////
+    $('.centerDiv img').delay(1000).fadeIn(1000);
     
-    $('.arrow').delay(2000).fadeIn();
+    $('.arrow').delay(3000).fadeIn();
 
    $('.refresh').on('click', fillVideo);
     
