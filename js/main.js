@@ -159,7 +159,13 @@ $(document).ready(function () {
         };
     };
     
+    
+        
+   
+    
     ////////// function calls ////
+    
+    $('.arrow').delay(3000).fadeIn();
 
    $('.refresh').on('click', fillVideo);
     
