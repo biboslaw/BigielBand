@@ -165,7 +165,7 @@ $(document).ready(function () {
     
     ////////// function calls ////
     
-    $('.arrow').delay(3000).slideDown();
+    $('.arrow').delay(2000).fadeIn();
 
    $('.refresh').on('click', fillVideo);
     
