@@ -18,6 +18,10 @@ body {
    
 }
 
+strong {
+    color: #333;
+}
+
 .nav {
     list-style-type: none;
     margin: 0;
@@ -240,6 +244,12 @@ ul .left {
     font-size: 1.5em;
     line-height: 1.5em;
     font-family: montserrat;
+    
+}
+
+#about p {
+    text-align: justify;
+    color: #555;
 }
 
 #about .centerArtist {
@@ -247,14 +257,16 @@ ul .left {
     text-align: center;
     
     padding-bottom: 4%;
-    padding-top: 2%;
+    padding-top: 0;
+    
 }
 
 #about .centerArtist .artist {
    /* display: none;*/
     max-width: 300px;
     display:inline-block;
-  
+    padding-top: 0;
+     margin-top: 0;
 }   
 
 
