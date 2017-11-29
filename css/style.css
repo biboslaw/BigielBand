@@ -76,7 +76,7 @@ body {
 }
 
 .mobileNav button:focus {
-    color: black;
+    color: white;
 }
 
 
@@ -169,7 +169,7 @@ ul .left {
 }
 
 #logo .centerDiv img {
-    max-width: 60%;
+    max-width: 70%;
     height: auto;
 }
 
@@ -193,7 +193,7 @@ ul .left {
 
     width: 70px;
     height: 70px;
-    margin-top: 20%;
+    margin-top: 18%;
     margin-left: auto;
     margin-right: auto;
     border-radius: 50%;
@@ -376,7 +376,6 @@ ul .left {
     font-style: italic;
     width: 500px;
     height: 200px;
-    vertical-align: middle;
     
 
 }
@@ -655,6 +654,7 @@ ul .left {
     #contact .contactDiv .funPage {
         padding: 0px;
         margin-top: 2%;
+        margin-bottom: 10%;
     }
     #contact .contactDiv .funPage a {
         display: inline-block;
@@ -668,7 +668,9 @@ ul .left {
         margin-bottom: 0;
     }
     
-    
+    #comments .quote1 {
+        width: 300px;
+    }
     
 }
 
@@ -908,22 +910,4 @@ transform: translateZ(0); */
 	transform: none;
     opacity: 1;
   filter: alpha(opacity=100);
-}
-
-.animBlock2 {
-    opacity: 1;
-    transform: translateX(0);
-    -webkit-transition: all .55s ease-in;
-    -moz-transition: all .55s ease-in;
-    -ms-transition: all .55s ease-in;
-    -o-transition: all .55s ease-in;
-    transition: all .55s ease-in;
-    will-change: opacity, transform;
-}
-}
-
-.hide {
-    left: 700px;
-    opacity: 1;
-        
 }
