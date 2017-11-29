@@ -46,10 +46,17 @@ body {
     
 }
 
-.mobileNav:hover {
+.mobileNav:focus {
     
    background-color:  rgba(255,255,255,0.8);
     color: black;
+   
+}
+
+.mobileNav:active {
+    
+   background-color:  rgba(255,255,255,0.8);
+    color: white;
    
 }
 
@@ -68,17 +75,13 @@ body {
     
 }
 
-.mobileNav button:hover {
+.mobileNav button:focus {
     color: black;
 }
 
-.mobileNav button:visited {
-    color: white;
-}
 
-.mobileNav:visited {
-	background: rgba(33,33,33,0.7);
-}
+
+
 
 
 
@@ -166,7 +169,7 @@ ul .left {
 }
 
 #logo .centerDiv img {
-    max-width: 60%;
+    max-width: 80%;
     height: auto;
 }
 
@@ -365,12 +368,14 @@ ul .left {
     transform: translateX(190%);
     left: 0;
     right: 0;
+    display: table-cell;
     margin: auto;
     padding-top: 2%;
     position: absolute;
     font-family: montserrat;
     font-style: italic;
     width: 500px;
+    height: 200px;
     
 
 }
@@ -401,35 +406,6 @@ ul .left {
     
 }
 
-#comments .quote2 {
-    
-    left: 1000px;
-    right: 0;
-    margin: auto;
-    padding-top: 2%;
-    position: absolute;
-    font-family: montserrat;
-    font-style: italic;
-    width: 500px;
-    transition: all .55s linear;
-    opacity: 0;
-   
-
-}
-
-
-#comments .quote2 p {
-    font-family: montserrat;
-    font-style: italic;
-    
-}
-
-#comments .quote2 h3{
-    font-family: archivoBlack;
-    font-weight: 100;
-    text-align: right;
-    
-}
 
 .quoteMoved {
     left: -700px;
@@ -630,6 +606,21 @@ ul .left {
         width: 320px;
         border: 2px solid black;
     }
+    
+    .arrow {
+        height: 40px;
+        width: 40px;
+        margin-top: 70%
+    }
+    
+    #logo svg {
+    width: 30px;
+    height: auto;
+    
+    
+    
+}
+    
 }
 
 @media only screen and (max-width: 1015px){
@@ -647,15 +638,17 @@ ul .left {
     #media .mediaOutDiv div {
         padding-top: 1%;
     }
+    
+    #contact .contactDiv {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 @media only screen and (max-width: 786px) {
     
-    #about p, h3 {
-  
-    font-size: 1em;
-    
-    
+    #about p, h3 { 
+    font-size: 1em; 
     }
     
     #contact .contactDiv .funPage {
@@ -673,6 +666,11 @@ ul .left {
     #contact .contactDiv .funPage .youtubeIcon {
         margin-bottom: 0;
     }
+    
+    #comments .quote1 {
+        width: 300px;
+    }
+    
 }
 
 .footer {

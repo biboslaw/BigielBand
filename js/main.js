@@ -4,11 +4,10 @@ $(document).ready(function () {
         
         quote0:{"q":"Serdecznie polecamy zespół!!! Goście weselni byli zachwyceni, bawili się do białego rana:) Impreza prowadzana profesjonalnie, tak jak nam zależało. Dziękujemy i GORĄCO POLECAMY!!!", "a":"Natalia Miłoch"},
         quote1:{"q":"Taaaaaak się tańczy jak Bigiel gra! WYŚMIENITY Zespół, doskonała muza! Polecamy! Polecamy! ... i jeszcze raz polecamy! Monia, Dawid i 130 gości weselnych :) Dzięki Panowie! Jesteście The Best!", "a":"Monika Sobota"},
-        quote2:{"q":"100% muzyki + 100% zaangażowania +100% radości= 300% satysfakcji ;))))))", "a":"Danka Plotnik"},
-        quote3:{"q":"Zabaw z zespołem Bigiel Band przynosi niezapomniane wrażenia ;p Wszyscy gości weselni świetnie się bawili. Muzyka na wysokim poziomie... nawet największego 'gniotka' zaaranżują, że szczeny opadają ;) POLECAMY SERDECZNIE!!!! Sabina i Mateusz.", "a":"Sabi Naser"},
-        quote4:{"q":"W imieniu wesela Anny i Łukasza, dziękujemy za świetną zabawę! Wszyscy Goście jak i Para Młoda bawili się wyśmienicie, wybór utworów a przede wszystkim (!!!) ich wykonania i aranże genialne :) dziękujemy Szymonowi, Sebastianowi, Markowi oraz Krzysztofowi :) ps. Konik na biegunach rządzi !:)", "a":"Jagoda Supernak-Koziarska"},
-        quote5:{"q":"(...)Najlepsza kapela na wesele ever! Muzyka świetna, podobała się każdemu (bez przesady - wszyscy goście niezależnie od wieku Was chwalili), zabawy weselne z żartem i ze smakiem, świetna atmosfera a do tego pełny profesjonalizm i dobry humor. Dziękujemy i polecamy wszystkim wesele z Biglami:)))", "a":"Marysia Poloczek"},
-        quote6:{"q":"Serdecznie dziękujemy za rewelacyjną zabawę podczas Naszego przyjęcia weselnego. Goście byli zachwyceni... i My też ;D Świetne i w pełni profesjonalne prowadzenie całej imprezy !!! Nieszablonowo, z pomysłem i super humorem, tak potrafi tylko Bigiel Band !!! POLECAMY GORĄCO", "a":"Aneta & Paweł"}
+        quote2:{"q":"Zabaw z zespołem Bigiel Band przynosi niezapomniane wrażenia ;p Wszyscy gości weselni świetnie się bawili. Muzyka na wysokim poziomie... nawet największego 'gniotka' zaaranżują, że szczeny opadają ;) POLECAMY SERDECZNIE!!!! Sabina i Mateusz.", "a":"Sabi Naser"},
+        quote3:{"q":"W imieniu wesela Anny i Łukasza, dziękujemy za świetną zabawę! Wszyscy Goście jak i Para Młoda bawili się wyśmienicie, wybór utworów a przede wszystkim (!!!) ich wykonania i aranże genialne :) dziękujemy Szymonowi, Sebastianowi, Markowi oraz Krzysztofowi :)", "a":"Jagoda Supernak-Koziarska"},
+        quote4:{"q":"(...)Najlepsza kapela na wesele ever! Muzyka świetna, podobała się każdemu (bez przesady - wszyscy goście niezależnie od wieku Was chwalili), zabawy weselne z żartem i ze smakiem, świetna atmosfera a do tego pełny profesjonalizm i dobry humor. Dziękujemy i polecamy wszystkim wesele z Biglami:)))", "a":"Marysia Poloczek"},
+        quote5:{"q":"Serdecznie dziękujemy za rewelacyjną zabawę podczas Naszego przyjęcia weselnego. Goście byli zachwyceni... i My też ;D Świetne i w pełni profesjonalne prowadzenie całej imprezy !!! Nieszablonowo, z pomysłem i super humorem, tak potrafi tylko Bigiel Band !!! POLECAMY GORĄCO", "a":"Aneta & Paweł"}
         
     };
     
@@ -45,7 +44,7 @@ $(document).ready(function () {
     
     function randomQuote(){
         randomize = Math.floor(Math.random()*10);
-        while (randomize>6&&randomize<10){
+        while (randomize>5&&randomize<10){
             randomize = Math.floor(Math.random()*10);
         }
         randomize = "quote" + randomize;
