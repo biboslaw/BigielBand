@@ -169,7 +169,7 @@ ul .left {
 }
 
 #logo .centerDiv img {
-    max-width: 80%;
+    max-width: 60%;
     height: auto;
 }
 
@@ -376,6 +376,7 @@ ul .left {
     font-style: italic;
     width: 500px;
     height: 200px;
+    vertical-align: middle;
     
 
 }
@@ -667,9 +668,7 @@ ul .left {
         margin-bottom: 0;
     }
     
-    #comments .quote1 {
-        width: 300px;
-    }
+    
     
 }
 
