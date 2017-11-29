@@ -406,7 +406,7 @@ ul .left {
     -o-animation: slide linear 2s infinite;
     -ms-animation: slide linear 2s infinite;
     animation: slide linear 2s infinite;
-    animation-duration: 9s;
+    animation-duration: 15s;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 }

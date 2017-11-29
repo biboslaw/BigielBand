@@ -165,7 +165,7 @@ $(document).ready(function () {
     
     fillQuote();
 
-    setInterval(fillQuote, 9000);
+    setInterval(fillQuote, 15000);
    
 
     $(document).on('scroll', onScroll);
