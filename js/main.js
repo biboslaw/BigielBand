@@ -2,8 +2,8 @@ $(document).ready(function () {
 
     var quotes = {
         
-        quote0:{"q":"Serdecznie polecamy zespół!!! Goście weselni byli zachwyceni, bawili się do białego rana:) Impreza prowadzana profesjonalnie, tak jak nam zależało. Dziękujemy i GORĄCO POLECAMY!!!", "a":"Natalia Miłoch"},
-        quote1:{"q":"Taaaaaak się tańczy jak Bigiel gra! WYŚMIENITY Zespół, doskonała muza! Polecamy! Polecamy! ... i jeszcze raz polecamy! Monia, Dawid i 130 gości weselnych :) Dzięki Panowie! Jesteście The Best!", "a":"Monika Sobota"},
+        quote0:{"q":"<br>Serdecznie polecamy zespół!!! Goście weselni byli zachwyceni, bawili się do białego rana:) Impreza prowadzana profesjonalnie, tak jak nam zależało. Dziękujemy i GORĄCO POLECAMY!!!", "a":"Natalia Miłoch"},
+        quote1:{"q":"<br>Taaaaaak się tańczy jak Bigiel gra! WYŚMIENITY Zespół, doskonała muza! Polecamy! Polecamy! ... i jeszcze raz polecamy! Monia, Dawid i 130 gości weselnych :) Dzięki Panowie! Jesteście The Best!", "a":"Monika Sobota"},
         quote2:{"q":"Zabaw z zespołem Bigiel Band przynosi niezapomniane wrażenia ;p Wszyscy gości weselni świetnie się bawili. Muzyka na wysokim poziomie... nawet największego 'gniotka' zaaranżują, że szczeny opadają ;) POLECAMY SERDECZNIE!!!! Sabina i Mateusz.", "a":"Sabi Naser"},
         quote3:{"q":"W imieniu wesela Anny i Łukasza, dziękujemy za świetną zabawę! Wszyscy Goście jak i Para Młoda bawili się wyśmienicie, wybór utworów a przede wszystkim (!!!) ich wykonania i aranże genialne :) dziękujemy Szymonowi, Sebastianowi, Markowi oraz Krzysztofowi :)", "a":"Jagoda Supernak-Koziarska"},
         quote4:{"q":"(...)Najlepsza kapela na wesele ever! Muzyka świetna, podobała się każdemu (bez przesady - wszyscy goście niezależnie od wieku Was chwalili), zabawy weselne z żartem i ze smakiem, świetna atmosfera a do tego pełny profesjonalizm i dobry humor. Dziękujemy i polecamy wszystkim wesele z Biglami:)))", "a":"Marysia Poloczek"},
@@ -40,6 +40,7 @@ $(document).ready(function () {
         var rand2;
         var iframeYT2 = JSON.parse(JSON.stringify(iframeYT));
         var elem = 0;
+        var count = 0;
 /////////// function declaration ///////////////    
     
     function randomQuote(){
@@ -160,6 +161,7 @@ $(document).ready(function () {
     };
     
     
+    
         
    
     
@@ -170,11 +172,55 @@ $(document).ready(function () {
 
    $('.refresh').on('click', fillVideo);
     
-    fillQuote();
+$('.quoteLeft').on('click', function () {
+    if (count == 5) {
+        count = 0;
+    } else {
+        count++;
+    }
+    $(this).fadeOut();
+    $('.quoteRight').fadeOut();
+    $('.quote1').addClass('slideLeft');
+    setTimeout(function () {
 
-    setInterval(fillQuote, 15000);
-   
+        //rand = randomQuote(); 
 
+        $('.quote1').children('p').html(quotes['quote' + count]['q']);
+        $('.quote1').children('h3').html(quotes['quote' + count]['a']);
+
+    }, 1000);
+    setTimeout(function () {
+        $('.quote1').removeClass('slideLeft')
+        $('.quoteLeft').fadeIn();
+        $('.quoteRight').fadeIn();
+    }, 2000);
+});
+
+
+
+$('.quoteRight').on('click', function () {
+    if (count == 0) {
+        count = 5;
+    } else {
+        count--;
+    }
+    $(this).fadeOut();
+    $('.quoteLeft').fadeOut();
+    $('.quote1').addClass('slideRight');
+    setTimeout(function () {
+        //rand = randomQuote(); 
+
+        $('.quote1').children('p').html(quotes['quote' + count]['q']);
+        $('.quote1').children('h3').html(quotes['quote' + count]['a']);
+
+    }, 1000);
+    setTimeout(function () {
+        $('.quote1').removeClass('slideRight');
+        $('.quoteRight').fadeIn();
+        $('.quoteLeft').fadeIn();
+    }, 2000);
+});
+    
     $(document).on('scroll', onScroll);
 
     
@@ -204,6 +250,11 @@ $(document).ready(function () {
 
 */
     $(window).on('scroll', function(){
+        if ($(this).scrollTop()+$(this).height()==$(document).height()){
+            $('.footerSection').fadeIn();
+        } else {
+            $('.footerSection').fadeOut();
+        }
                menuSwitch();
     });
     menuSwitch();

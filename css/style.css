@@ -19,7 +19,7 @@ body {
 }
 
 strong {
-    color: #333;
+    color: #de7a31;
 }
 
 .nav {
@@ -33,7 +33,7 @@ strong {
     top: 0;
     width: 100%;
     font-family: archivoBlack;
-    z-index: 9998;
+    z-index: 9997;
     display: none;
   
 }
@@ -41,7 +41,7 @@ strong {
 .mobileNav {
     position: fixed;
     background: rgba(33,33,33,0.7);
-    z-index: 9999;
+    z-index: 9998;
     width: 100%;
     display: none;
     text-align: center;
@@ -89,6 +89,32 @@ strong {
 
 
 
+.cta {
+    width: 200px;
+    height: 50px;
+    border-radius: 7px;
+    background-color: transparent;
+    color: white;
+    font-family: archivoBlack;
+    font-size: 1em;
+    margin-bottom: 50%;
+    box-shadow: inset 0 0 10px white;
+    border: 2px solid white;
+    outline: none;
+   
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+
+
+.cta:hover{
+    background-color: #de7a31;
+    border: 1px solid white;
+    box-shadow: 0 0 6px #ffb84a;
+}
+
+
 
 
 li {
@@ -97,7 +123,7 @@ li {
 
 li a {
     display: block;
-    color: white;
+    color: #ffb84a;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -143,10 +169,15 @@ ul .left {
         padding-bottom: 1%;
         
     }
+    
+    .cta {
+        display: block;
+    }
 }
 
 .active {
     background-color: #2980b9;
+    color: #ffb84a;
 }
 
 #logo {
@@ -272,6 +303,11 @@ ul .left {
      margin-top: 0;
 }   
 
+#about .centerArtist .artist h3 {
+	color: #333;
+   
+}
+
 
 #about .centerArtist .artist img {
     max-width: 200px;
@@ -361,7 +397,7 @@ ul .left {
 
 #comments {
     background-color: #111111; 
-    min-height: 250px;
+    min-height: 300px;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
     color: white;
@@ -370,28 +406,22 @@ ul .left {
     overflow: hidden;
 }
 
-#comments .commentsDiv {
-    
-    position: relative;
-    width: 100%
-    
-    
-}
 
 #comments .quote1 {
     
-    transform: translateX(190%);
+ 
     left: 0;
     right: 0;
-    display: table-cell;
     margin: auto;
-    padding-top: 2%;
     position: absolute;
     font-family: montserrat;
     font-style: italic;
     width: 500px;
     height: 200px;
-    
+    transform: translateX(0);
+    padding-top: 3%;
+   
+   
 
 }
 
@@ -400,18 +430,28 @@ ul .left {
     font-family: montserrat;
     font-style: italic;
    
+   
     
 }
 
-.slideEffect {
-    -webkit-animation: slide linear 2s infinite;
-    -moz-animation: slide linear 2s infinite;
-    -o-animation: slide linear 2s infinite;
-    -ms-animation: slide linear 2s infinite;
-    animation: slide linear 2s infinite;
-    animation-duration: 15s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
+.slideLeft {
+    -webkit-animation: slideLeft linear 2s;
+    -moz-animation: slideLeft linear 2s;
+    -o-animation: slideLeft linear 2s;
+    -ms-animation: slideLeft linear 2s;
+    animation: slideLeft linear 2s;
+    
+	
+}
+
+.slideRight {
+    -webkit-animation: slideRight linear 2s;
+    -moz-animation: slideRight linear 2s;
+    -o-animation: slideRight linear 2s;
+    -ms-animation: slideRight linear 2s;
+    animation: slideRight linear 2s;
+    
+	
 }
 
 #comments .quote1 h3{
@@ -421,13 +461,73 @@ ul .left {
     
 }
 
-
-.quoteMoved {
-    left: -700px;
-    opacity: 1;
-    background-color: blue;
+#comments .quoteLeft, .quoteRight {
+    background-color: rgba(230, 230, 230, 0.3);
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    margin: auto;
+    border-style: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+    
+    
 }
 
+#comments .quoteLeft {
+    top: 0;
+    bottom: 0;
+    left: 20%;
+}
+
+#comments .quoteRight {
+    top: 0;
+    bottom: 0;
+    right: 20%;
+}
+
+#comments .quoteLeft svg{
+    margin: auto;
+    fill: rgba(230, 230, 230, 0.8);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+}
+
+#comments .quoteLeft:hover {
+    fill: rgba(230, 230, 230, 1);
+    background-color: rgba(	255, 184, 74, 0.5);
+}
+
+#comments .quoteRight:hover {
+    fill: rgba(230, 230, 230, 1);
+    background-color: rgba(	255, 184, 74, 0.5);
+}
+
+
+#comments .quoteRight svg{
+    margin: auto;
+    fill: rgba(230, 230, 230, 0.8);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#comments .quoteRight svg{
+    margin: auto;
+    fill: rgba(230, 230, 230, 0.8);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 
 #company {
     min-height: 200px;
@@ -492,8 +592,6 @@ ul .left {
     transform: scale(1.2);
     fill: red;
 }
-
-
 #contact .contactDiv {
     text-align: center;
     padding-top: 3%;
@@ -520,6 +618,8 @@ ul .left {
     display: inline-block;
     padding-left: 10%;    
     padding-top: 1%;
+    
+    
     
 }
 
@@ -574,9 +674,10 @@ ul .left {
 
 #contact .contactDiv .funPage .fbIcon{
     fill: white;
-    height: 100px;
+    height: 90px;
     width: auto;
     transition: 0.2s linear;
+    margin-bottom: 3%;
 }
 
 #contact .contactDiv .funPage .fbIcon:hover{
@@ -586,9 +687,10 @@ ul .left {
 
 #contact .contactDiv .funPage .instaIcon{
     fill: white;
-    height: 100px;
+    height: 90px;
     width: auto;
     transition: 0.2s linear;
+    margin: 4% 0;
 }
 
 #contact .contactDiv .funPage .instaIcon:hover{
@@ -601,8 +703,8 @@ ul .left {
     height: 90px;
     width: auto;
     transition: 0.2s linear;
-    margin-top: 5%;
-    margin-bottom: 100%;
+    margin-top: 4%;
+    margin-bottom: 10%;
 }
 
 #contact .contactDiv .funPage .youtubeIcon:hover{
@@ -613,6 +715,34 @@ ul .left {
 
 #contact .contactDiv .funPage a{
     display: block;
+   
+    max-height: 100px;
+}
+
+.footerSection {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    color: black;
+    text-align: center;
+    font-family: montserrat;
+    font-size: 0.7em;
+    font-weight: 500;
+    display: none;
+}
+
+.footerSection a {
+    text-decoration: none;
+    color:crimson;
+}
+
+.footerSection a:hover{
+    background-color: black;
+    color: white;
+    
 }
 
 @media only screen and (max-width: 600px) {
@@ -631,16 +761,45 @@ ul .left {
     #logo svg {
     width: 30px;
     height: auto;
-    
-    
-    
 }
+    
+    #logo .centerDiv img {
+        max-width: 90%;
+        height: auto;
+    }
+    
+    #comments .quoteLeft, .quoteRight {
+        height: 100%;
+        width: 30px;
+    }
+    #comments .quoteLeft {
+       left: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    
+    #comments .quoteRight {
+       right: 0; 
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    
+    #contact .contactDiv .funPage a:first-child {
+        margin-left:26%;
+        text-decoration: none;
+        margin-bottom: 5%;
+    }
+   
+    
+    
+    
     
 }
 
 @media only screen and (max-width: 1015px){
     #media .mediaOutDiv div:nth-child(even) {
         padding-left: 0px;
+        
     }
     #media .mediaOutDiv div:nth-child(odd) {
 
@@ -654,22 +813,33 @@ ul .left {
         padding-top: 1%;
     }
     
-    #contact .contactDiv {
+     #contact .contactDiv {
         padding-left: 0;
         padding-right: 0;
     }
+    
+   
 }
-
 @media only screen and (max-width: 786px) {
     
     #about p, h3 { 
     font-size: 1em; 
     }
     
+
+  
+    #comments .quote1 {
+        width: 300px;
+        padding-top: 7%;
+           
+        
+    }
+    
     #contact .contactDiv .funPage {
         padding: 0px;
         margin-top: 2%;
         margin-bottom: 10%;
+        display: block;
     }
     #contact .contactDiv .funPage a {
         display: inline-block;
@@ -683,89 +853,200 @@ ul .left {
         margin-bottom: 0;
     }
     
-    #comments .quote1 {
-        width: 300px;
+    #contact .contactDiv .funPage a:first-child {
+        display: block;
+        height: 70px;
     }
+    
+    
     
 }
 
-.footer {
-    height: 12px;
-    background-color: #111111;
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
-    text-align: center;
-    font-family: montserrat;
-    font-size: 0.6em;
-}
 
-.footer a {
-    text-decoration: none;
-    color:crimson;
-}
 
-.footer a:hover{
-    background-color: white;
-    
-}
+@-webkit-keyframes slideLeft {
+    0% {
 
-@-webkit-keyframes slide {
-  0%,10 {
-        opacity: 0;
+        transform: translateX(0);
     }
-    20%,
-    70% {
+
+    50%,
+    55% {
+        opacity: 0;
+        transform: translateX(-190%);
+    }
+    56% {
+        transform: translateX(190%);
+    }
+
+    100% {
         opacity: 1;
         transform: translateX(0);
     }
-    100% {
-        opacity: 0;
-        transform: translateX(-170%);
-    }
+
 }
 
-@-moz-keyframes slide {
-   0%,10 {
-        opacity: 0;
+
+@-moz-keyframes slideLeft {
+    0% {
+
+        transform: translateX(0);
     }
-    20%,
-    70% {
+
+    50%,
+    55% {
+        opacity: 0;
+        transform: translateX(-190%);
+    }
+    56% {
+        transform: translateX(190%);
+    }
+
+    100% {
         opacity: 1;
         transform: translateX(0);
     }
-    100% {
-        opacity: 0;
-        transform: translateX(-170%);
-    }
-}
-@-o-keyframes slide {
- 0%,10 {
-        opacity: 0;
-    }
-    20%,
-    70% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(-170%);
-    }
+
 }
 
-@keyframes slide {
-    0%,10 {
-        opacity: 0;
+@-o-keyframes slideLeft {
+    0% {
+
+        transform: translateX(0);
     }
-    20%,
-    70% {
+
+    50%,
+    55% {
+        opacity: 0;
+        transform: translateX(-190%);
+    }
+    56% {
+        transform: translateX(190%);
+    }
+
+    100% {
         opacity: 1;
         transform: translateX(0);
     }
-    100% {
-        opacity: 0;
-        transform: translateX(-170%);
+
+}
+
+@keyframes slideLeft {
+    0% {
+
+        transform: translateX(0);
     }
+
+    50%,
+    55% {
+        opacity: 0;
+        transform: translateX(-190%);
+    }
+    56% {
+        transform: translateX(190%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+
+
+
+
+
+
+@-webkit-keyframes slideRight {
+    0% {
+
+        transform: translateX(0);
+    }
+
+    50%,
+    55% {
+        opacity: 0;
+        transform: translateX(190%);
+    }
+    56% {
+        transform: translateX(-190%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+@-moz-keyframes slideRight {
+    0% {
+
+        transform: translateX(0);
+    }
+
+    50%,
+    55% {
+        opacity: 0;
+        transform: translateX(190%);
+    }
+    56% {
+        transform: translateX(-190%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+@-o-keyframes slideRight {
+    0% {
+
+        transform: translateX(0);
+    }
+
+    50%,
+    55% {
+        opacity: 0;
+        transform: translateX(190%);
+    }
+    56% {
+        transform: translateX(-190%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes slideRight {
+    0% {
+
+        transform: translateX(0);
+    }
+
+    50%,
+    55% {
+        opacity: 0;
+        transform: translateX(190%);
+    }
+    56% {
+        transform: translateX(-190%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
 }
 
 
